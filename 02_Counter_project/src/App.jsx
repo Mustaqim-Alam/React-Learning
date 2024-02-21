@@ -4,32 +4,23 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  // let counter = 15;
+  let [counter, setCounter] = useState(0);
 
-  let [counter, setCounter] = useState(4);
-
-  const addValue = () => {
-    console.log("Clicked", counter);
-    if (counter < 20) {
-      counter += 1;
-      setCounter(counter);
-    }
-  };
-
-  const decreaseValue = () => {
-    if (counter > 0) {
-      counter -= 1;
-      setCounter(counter);
-    }
+  function addValue() {
+    setCounter(counter + 1);
+  }
+  const removeValue = () => {
+    setCounter(counter - 1);
   };
 
   return (
     <>
-      <h1>Code with react</h1>
-      <h2>Counter Value: {counter}</h2>
-      <br />
-      <button onClick={addValue}>Add value </button>
-      <button onClick={decreaseValue}>Decrease Value</button>
+      <h1>Learning react Hooks</h1>
+      <h3>Counter value: {counter}</h3>
+      <div>
+        <button onClick={addValue}>Add Value</button>
+        <button onClick={removeValue}>Remove Value</button>
+      </div>
     </>
   );
 }

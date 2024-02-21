@@ -14,6 +14,7 @@ function App() {
       </h1>
       <Card username = "ChaiAurCode" />
       <Card username="Marry" btnTxt="Click here"/>
+      <Card username="Alam" btnTxt="Submit" />
     </>
   );
 }
